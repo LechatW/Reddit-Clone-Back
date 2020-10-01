@@ -54,7 +54,7 @@ public class CommentService {
         commentRepository.save(comment);
 
         String message = mailContentBuilder.build(post.getUser().getUsername() + " posted a comment on your post. \n" + post.getUrl());
-        sendCommentNotification(message, post.getUser());
+        sendCommentNotification(message, authService.getCurrentUser());
     }
 
     private void sendCommentNotification(String message, User user) {
