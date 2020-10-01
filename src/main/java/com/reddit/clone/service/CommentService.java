@@ -53,7 +53,7 @@ public class CommentService {
         Comment comment = commentMapper.mapToEntity(commentDto, post, authService.getCurrentUser());
         commentRepository.save(comment);
 
-        String message = mailContentBuilder.build(post.getUser().getUsername() + " posted a comment on your post. \n" + post.getUrl());
+        String message = mailContentBuilder.build(authService.getCurrentUser() + " posted a comment on your post. \n" + post.getUrl());
         sendCommentNotification(message, authService.getCurrentUser());
     }
 
