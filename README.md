@@ -2,6 +2,7 @@
 This is the back-end of a side-project i made to train everyday.
 It's built as a Rest API using Spring Boot, Spring Security, Spring Data JPA with MySQL, Spring MVC.
 I also used libraries such as JWT, Mapstruct, Marlonlom (to display a custom time) and Swagger.
+U can find the front-end code there [Reddit-Clone-Front](https://github.com/LechatW/Reddit-Clone-Front)
 
 # Screenshots
 
